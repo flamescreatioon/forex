@@ -1,0 +1,160 @@
+🗂️ Forex Simulation App — Development Roadmap
+Stage 1 — Project Setup & Structure
+
+📁 Files/Directories:
+
+Create folders: app/, public/, views/, config/, routes/
+
+Create index.php as the main entry
+
+Create config/config.php
+
+🎯 Goal:
+
+Initialize project folder
+
+Set up a clean base file structure
+
+Load configurations and test initial routing
+
+Stage 2 — Core Configuration & Utilities
+
+📁 Files:
+
+config/config.php
+
+app/helpers/Utils.php
+
+app/helpers/Format.php
+
+🎯 Goal:
+
+Add constants (e.g. BASE_URL, app name, timezone)
+
+Add helper functions like:
+
+random number generator for simulation
+
+format currency and timestamps
+
+Ensure index.php includes the helpers and config
+
+Stage 3 — Market Simulation Engine
+
+📁 Files:
+
+app/services/PriceGenerator.php
+
+app/services/MarketData.php
+
+(optional) data/fake_market.json
+
+🎯 Goal:
+
+Build a fake price generator that creates random but realistic forex prices
+
+Store generated prices in memory or JSON
+
+Create functions to return “live” price updates
+
+Stage 4 — Controllers and Routes
+
+📁 Files:
+
+routes/web.php
+
+app/controllers/ChartController.php
+
+app/controllers/TradeController.php
+
+🎯 Goal:
+
+Add routing logic to call controllers
+
+Create a ChartController that returns JSON data from PriceGenerator
+
+Create a TradeController that simulates fake trade entries and profits
+
+Stage 5 — Frontend & Dashboard Layout
+
+📁 Files:
+
+views/layouts/header.php
+
+views/layouts/footer.php
+
+views/dashboard.php
+
+public/css/style.css
+
+🎯 Goal:
+
+Build dashboard layout
+
+Add a section for charts, balance, and trade summary
+
+Style it to look like a trading terminal (like MetaTrader or TradingView)
+
+Stage 6 — Chart Visualization
+
+📁 Files:
+
+public/js/chart.js
+
+public/js/main.js
+
+🎯 Goal:
+
+Use Chart.js or ApexCharts to render the live forex chart
+
+Use JavaScript intervals (e.g., every 1s) to call PHP endpoints and update chart
+
+Make the chart move continuously like a real market
+
+Stage 7 — Profit Simulation & Trade Management
+
+📁 Files:
+
+app/services/ProfitCalculator.php
+
+app/models/TradeModel.php
+
+views/dashboard.php (update)
+
+🎯 Goal:
+
+Simulate fake trades and profit changes based on generated prices
+
+Display “Account Balance,” “Open Trades,” “Profit/Loss”
+
+Show a fake “In Profit” indicator that updates dynamically
+
+Stage 8 — Polish & Finishing
+
+📁 Files:
+
+public/css/style.css (final touches)
+
+README.md
+
+.htaccess (pretty URLs)
+
+🎯 Goal:
+
+Add UI polish and responsiveness
+
+Add URL rewriting
+
+Clean up all PHP includes and require paths
+
+Document setup and usage
+
+⚙️ Bonus (Optional Add-ons)
+
+✅ Add user login/register (AuthController.php)
+
+✅ Save fake trade history to SQLite/MySQL
+
+✅ Create multiple “currency pairs” (EUR/USD, GBP/JPY, etc.)
+
+✅ Add “news ticker” or “market sentiment” bar
