@@ -22,12 +22,6 @@ switch ($route){
         break;
 
     default:
-        echo "<h3>Welcome to Forex Simulator API</h3>";
-        echo "<ul>
-        <li>/routes/web.php?route=chart/data - get Market Data </li>
-        <li>/routes/web.php?route=chart/update - Generate Next Tick </li>
-        <li>>/routes/web.php?route=trade/open — Open a Trade</li>
-        <li>/routes/web.php?route=trade/all — Get All Trades</li>
-        </ul>";
+       include __DIR__.'../public/index.php';
         break;
 }
