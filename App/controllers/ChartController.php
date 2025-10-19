@@ -2,6 +2,7 @@
 
 require_once __DIR__.'/../services/marketData.php';
 
+
 class ChartController{
    private $market;
    public function __construct(){
