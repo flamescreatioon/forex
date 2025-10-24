@@ -1199,17 +1199,17 @@ $theme = $_SESSION['settings']['theme'];
         }
         
         function updateAccountDisplay(account) {
-            document.getElementById('header-balance').textContent = ' + account.balance.toFixed(2);
-            document.getElementById('header-equity').textContent = ' + account.equity.toFixed(2);
-            document.getElementById('header-profit').textContent = ' + account.profit.toFixed(2);
+            document.getElementById('header-balance').textContent = ' + account.balance.toFixed(2)';
+            document.getElementById('header-equity').textContent = ' + account.equity.toFixed(2)';
+            document.getElementById('header-profit').textContent = ' + account.profit.toFixed(2)';
             document.getElementById('header-profit').className = 'account-value ' + (account.profit >= 0 ? 'profit-positive' : 'profit-negative');
-            
-            document.getElementById('dash-balance').textContent = ' + account.balance.toFixed(2);
-            document.getElementById('dash-equity').textContent = ' + account.equity.toFixed(2);
-            document.getElementById('dash-margin').textContent = ' + account.margin.toFixed(2);
-            document.getElementById('dash-free-margin').textContent = ' + account.free_margin.toFixed(2);
+
+            document.getElementById('dash-balance').textContent = ' + account.balance.toFixed(2)';
+            document.getElementById('dash-equity').textContent = ' + account.equity.toFixed(2)';
+            document.getElementById('dash-margin').textContent = ' + account.margin.toFixed(2)';
+            document.getElementById('dash-free-margin').textContent = ' + account.free_margin.toFixed(2)';
             document.getElementById('dash-margin-level').textContent = account.margin_level.toFixed(2) + '%';
-            document.getElementById('dash-profit').textContent = ' + account.profit.toFixed(2);
+            document.getElementById('dash-profit').textContent = ' + account.profit.toFixed(2)';
             document.getElementById('dash-profit').className = 'stat-value ' + (account.profit >= 0 ? 'profit-positive' : 'profit-negative');
         }
         
